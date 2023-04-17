@@ -158,5 +158,30 @@
       "\t}",
       "}"
     ]
+  },
+  "Riverpod: consumer": {
+    "scope": "dart",
+    "prefix": "consumer",
+    "body": [
+      "Consumer(",
+      "\tbuilder: (context, ref, child) {",
+      "\t\treturn $1;",
+      "\t},",
+      ")"
+    ],
+    "description": "Creates a consumer"
+  },
+  "Riverpod: hook consumer": {
+    "scope": "dart",
+    "prefix": "hook",
+    "body": [
+      "HookConsumer(",
+      "\tbuilder: (context, ref, child) {",
+      "\t\t// final state = useState(0);",
+      "\t\treturn $1;",
+      "\t},",
+      ")"
+    ],
+    "description": "Creates a hook consumer"
   }
 }

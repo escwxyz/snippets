@@ -1,0 +1,102 @@
+{
+  "Stateless Widget": {
+    "scope": "dart",
+    "prefix": "stless",
+    "description": "Create a StatelessWidget",
+    "body": [
+      "class $1 extends StatelessWidget {",
+      "\tconst $1({super.key});\n",
+      "\t@override",
+      "\tWidget build(BuildContext context) {",
+      "\t\treturn Container();",
+      "\t}",
+      "}"
+    ]
+  },
+  "GridView.Builder": {
+    "prefix": "gridViewB",
+    "body": [
+      "GridView.builder(",
+      "\tgridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(",
+      "\t\tcrossAxisCount: ${1:2},",
+      "\t),",
+      "\titemCount: ${2:2},",
+      "\titemBuilder: (BuildContext context, int index) {",
+      "\t\treturn ${3:};",
+      "\t},",
+      "),"
+    ],
+    "description": "Creates a scrollable, 2D array of widgets that are created on demand. Providing a non-null `itemCount` improves the ability of the [GridView] to estimate the maximum scroll extent."
+  },
+  "GridView.Count": {
+    "prefix": "gridViewC",
+    "body": [
+      "GridView.count(",
+      "\tcrossAxisSpacing: ${1:1},",
+      "\tmainAxisSpacing: ${2:2},",
+      "\tcrossAxisCount: ${3:2},",
+      "\tchildren: <Widget> [",
+      "\t\t${4:}",
+      "\t],",
+      "),"
+    ],
+    "description": "Creates a scrollable, 2D array of widgets with a fixed number of tiles in the cross axis."
+  },
+  "GridView.Extent": {
+    "prefix": "gridViewE",
+    "body": [
+      "GridView.extent(",
+      "\tmaxCrossAxisExtent:  ${1:2},",
+      "\tchildren: <Widget> [",
+      "\t\t${2:}",
+      "\t],",
+      "),"
+    ],
+    "description": "Creates a scrollable, 2D array of widgets with tiles that each have a maximum cross-axis extent."
+  },
+  "ListView.Builder": {
+    "prefix": "listViewB",
+    "body": [
+      "ListView.builder(",
+      "\titemCount: ${1:1},",
+      "\titemBuilder: (BuildContext context, int index) {",
+      "\t\treturn ${2:};",
+      "\t},",
+      "),"
+    ],
+    "description": "Creates a scrollable, linear array of widgets that are created on demand.Providing a non-null `itemCount` improves the ability of the [ListView] to estimate the maximum scroll extent."
+  },
+  "ListView.Separated": {
+    "prefix": "listViewS",
+    "body": [
+      "ListView.separated(",
+      "\titemCount: ${1:1},",
+      "\tseparatorBuilder: (BuildContext context, int index) {",
+      "\t\treturn ${2:};",
+      "\t},",
+      "\titemBuilder: (BuildContext context, int index) {",
+      "\t\treturn ${3:};",
+      "\t},",
+      "),"
+    ],
+    "description": "Creates a fixed-length scrollable linear array of list 'items' separated by list item 'separators'."
+  },
+  "Future Builder": {
+    "prefix": "futureBldr",
+    "body": [
+      "FutureBuilder(",
+      "\tfuture: ${1:Future},",
+      "\tinitialData: ${2:InitialData},",
+      "\tbuilder: (BuildContext context, AsyncSnapshot snapshot) {",
+      "\t\treturn ${3:};",
+      "\t},",
+      "),"
+    ],
+    "description": "Creates a Future Builder. This builds itself based on the latest snapshot of interaction with a Future."
+  },
+  "toString": {
+    "prefix": "toStr",
+    "body": ["@override", "String toString() {", "\treturn ${1:toString};", "}"],
+    "description": "Returns a string representation of this object."
+  }
+}

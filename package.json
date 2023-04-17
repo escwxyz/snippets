@@ -27,6 +27,14 @@
       {
         "language": "dart",
         "path": "./dart/riverpod.json"
+      },
+      {
+        "language": "dart",
+        "path": "./dart/flutter.json"
+      },
+      {
+        "language": "rust",
+        "path": "./rust/rust.json"
       }
     ]
   }
