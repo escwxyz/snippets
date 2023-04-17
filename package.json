@@ -1,10 +1,10 @@
 {
   "name": "snippets",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "A collection of personal snippets mainly for TypeScript, Rust and Dart.",
-  "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "vsce package"
   },
   "repository": {
     "type": "git",
@@ -13,10 +13,21 @@
   "keywords": [
     "Snippets"
   ],
+  "engines": {
+    "vscode": "^1.62.3"
+  },
   "author": "",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/escwxyz/snippets/issues"
   },
-  "homepage": "https://github.com/escwxyz/snippets#readme"
+  "homepage": "https://github.com/escwxyz/snippets#readme",
+  "contributes": {
+    "snippets": [
+      {
+        "language": "dart",
+        "path": "./dart/riverpod.json"
+      }
+    ]
+  }
 }
