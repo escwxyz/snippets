@@ -216,5 +216,10 @@
     "prefix": "while",
     "body": ["while ${1:condition} {", "\t${2:unimplemented!();}", "}"],
     "description": "while … { … }"
+  },
+  "tests": {
+    "prefix": "tests",
+    "body": ["#[cfg(test)]", "mod tests {", "\tuse super::*;", ""],
+    "description": "unit test module"
   }
 }
