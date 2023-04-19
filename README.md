@@ -12,11 +12,17 @@ For neovim, clone the repo into your local machine, and use [Luasnip](https://gi
 require("luasnip.loaders.from_vscode").lazy_load({paths = "path/to/your/snippets/folder"})
 ```
 
-For VS Code, clone the repo, and build it into extension via:
+For VS Code, you need to install the `vsce` npm package globally with:
+
+```bash
+npm install --global @vscode/vsce
+```
+
+and then clone the repo, and build it into extension via:
 
 ```bash
 cd snippets
 npm run build
 ```
 
-Then in your VS Code, click extensions tab, click the top right icon, then click `install from VSIX` to select the extension file.
+then in your VS Code, click extensions tab, click the top right icon, then click `install from VSIX` to select the extension file.
