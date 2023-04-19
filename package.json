@@ -41,6 +41,10 @@
         "path": "./typescript/typescript.json"
       },
       {
+        "language": "typescriptreact",
+        "path": "./typescript/solidjs.json"
+      },
+      {
         "language": "yaml",
         "path": "./typescript/ci.json"
       }

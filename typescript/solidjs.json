@@ -1,0 +1,175 @@
+{
+  "Solid empty function component": {
+    "prefix": "scomp",
+    "body": [
+      "export const ${1:${TM_FILENAME_BASE}}: Component<{$2}> = (props) => {",
+      "\t$0",
+      "\treturn <div></div>;",
+      "};"
+    ],
+    "description": "Solid empty function component"
+  },
+  "Solid empty Parent Component": {
+    "prefix": "spcomp",
+    "body": [
+      "export const ${1:${TM_FILENAME_BASE}}: ParentComponent<{$2}> = (props) => {",
+      "\t$0",
+      "\treturn <div>{props.children}</div>;",
+      "};"
+    ],
+    "description": "Solid empty Parent Component"
+  },
+  "Solid empty Flow Component": {
+    "prefix": "sfcomp",
+    "body": [
+      "export const ${1:${TM_FILENAME_BASE}}: FlowComponent<{$2}, ${3:JSX.Element}> = (props) => {",
+      "\t$0",
+      "\treturn <div>{props.children}</div>;",
+      "};"
+    ],
+    "description": "Solid empty Flow Component"
+  },
+  "Solid empty Void Component": {
+    "prefix": "svcomp",
+    "body": [
+      "export const ${1:${TM_FILENAME_BASE}}: VoidComponent<{$2}> = (props) => {",
+      "\t$0",
+      "\treturn <div></div>;",
+      "};"
+    ],
+    "description": "Solid empty Void Component"
+  },
+  "Solid empty function component. With Imports": {
+    "prefix": "scompi",
+    "body": [
+      "import { Component } from \"solid-js\";",
+      "",
+      "export const ${1:${TM_FILENAME_BASE}}: Component<{$2}> = (props) => {",
+      "\t$0",
+      "\treturn <div></div>;",
+      "};"
+    ],
+    "description": "Solid empty function component. With Imports"
+  },
+  "Solid empty function component. With Imports and default export": {
+    "prefix": "scompie",
+    "body": [
+      "import { Component } from \"solid-js\";",
+      "",
+      "export const ${1:${TM_FILENAME_BASE}}: Component<{$2}> = (props) => {",
+      "\t$0",
+      "\treturn <div></div>;",
+      "};",
+      "",
+      "export default ${1:${TM_FILENAME_BASE}};"
+    ],
+    "description": "Solid empty function component. With Imports and default export"
+  },
+  "Solid empty Parent Component. With Imports": {
+    "prefix": "spcompi",
+    "body": [
+      "import { ParentComponent } from \"solid-js\";",
+      "",
+      "export const ${1:${TM_FILENAME_BASE}}: ParentComponent<{$2}> = (props) => {",
+      "\t$0",
+      "\treturn <div>{props.children}</div>;",
+      "};"
+    ],
+    "description": "Solid empty Parent Component. With Imports"
+  },
+  "Solid empty Flow Component. With Imports": {
+    "prefix": "sfcompi",
+    "body": [
+      "import { FlowComponent, JSX } from \"solid-js\";",
+      "",
+      "export const ${1:${TM_FILENAME_BASE}}: FlowComponent<{$2}, ${3:JSX.Element}> = (props) => {",
+      "\t$0",
+      "\treturn <div>{props.children}</div>;",
+      "};"
+    ],
+    "description": "Solid empty Flow Component. With Imports"
+  },
+  "Solid empty Void Component. With Imports": {
+    "prefix": "svcompi",
+    "body": [
+      "import { VoidComponent } from \"solid-js\";",
+      "",
+      "export const ${1:${TM_FILENAME_BASE}}: VoidComponent<{$2}> = (props) => {",
+      "\t$0",
+      "\treturn <div></div>;",
+      "};"
+    ],
+    "description": "Solid empty Void Component. With Imports"
+  },
+  "Component extending an HTML Element": {
+    "prefix": "shtmlcomp",
+    "body": [
+      "export const ${1:${TM_FILENAME_BASE}}: ParentComponent<",
+      "  ComponentProps<\"${2:div}\"> & {",
+      "    $0",
+      "  }",
+      "> = (props) => {",
+      "  const [local, attrs] = splitProps(props, []);",
+      "",
+      "  return <${2:div} {...attrs}>{props.children}</${2:div}>;",
+      "};"
+    ],
+    "description": "Component extending an HTML Element"
+  },
+  "Component extending an HTML Element. With Imports": {
+    "prefix": "shtmlcompi",
+    "body": [
+      "import { ParentComponent, splitProps, ComponentProps } from \"solid-js\";",
+      "",
+      "export const ${1:${TM_FILENAME_BASE}}: ParentComponent<",
+      "  ComponentProps<\"${2:div}\"> & {",
+      "    $0",
+      "  }",
+      "> = (props) => {",
+      "  const [local, attrs] = splitProps(props, []);",
+      "",
+      "  return <${2:div} {...attrs}>{props.children}</${2:div}>;",
+      "};"
+    ],
+    "description": "Component extending an HTML Element. With Imports"
+  },
+
+  "Simple createSignal": {
+    "prefix": "ssig",
+    "body": [
+      "const [${1:state}, set${1/(.*)/${1:/capitalize}/}] = createSignal(${2});"
+    ],
+    "description": "Simple createSignal"
+  },
+  "Simple createEffect": {
+    "prefix": "seff",
+    "body": [
+      "createEffect(() => {",
+      "\tconst value = ${1:source}();",
+      "\t$0",
+      "});"
+    ],
+    "description": "Simple createEffect"
+  },
+  "createEffect with explicit sources": {
+    "prefix": "seffon",
+    "body": [
+      "createEffect(on(${1: source}, (value, prev) => {",
+      "\t$0",
+      "}));"
+    ],
+    "description": "createEffect with explicit sources"
+  },
+  "Simple createMemo": {
+    "prefix": "smemo",
+    "body": ["const ${1:value} = createMemo(() => $0);"],
+    "description": "Simple createMemo"
+  },
+  "createMemo with explicit sources": {
+    "prefix": "smemoon",
+    "body": [
+      "const ${1:value} = createMemo(on(${2:value}, (value, prev) => $0));"
+    ],
+    "description": "createMemo with explicit sources"
+  }
+}
