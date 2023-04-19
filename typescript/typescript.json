@@ -3,10 +3,10 @@
     "prefix": "vitest",
     "body": [
       "if (import.meta.vitest) {",
-      "\tconst {test, expect} = import.meta.vitest",
+      "\tconst { test, expect } = import.meta.vitest",
       "\ttest('test one', () => {",
       "\t\texpect().toBe()",
-      "\t}",
+      "\t})",
       "}"
     ],
     "description": "Vitest source test"
