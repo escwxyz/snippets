@@ -190,7 +190,7 @@
   },
   "test": {
     "prefix": "test",
-    "body": ["#[test]", "fn ${1:name}() {", "\t${2:unimplemented!();}", "}"],
+    "body": ["#[test]", "fn ${1:name}() {", "\t${2:assert_eq!();}", "}"],
     "description": "#[test]"
   },
   "trait": {
@@ -219,7 +219,14 @@
   },
   "tests": {
     "prefix": "tests",
-    "body": ["#[cfg(test)]", "mod tests {", "\tuse super::*;", ""],
+    "body": ["#[cfg(test)]", "mod tests {", "\tuse super::*;", "}"],
     "description": "unit test module"
+  },
+  "env": {
+    "prefix": "env",
+    "body": [
+      "env::var(\"${1:NAME}\").expect(\"Failed to load environment variable ${1:NAME}\");"
+    ],
+    "description": "environment variable"
   }
 }

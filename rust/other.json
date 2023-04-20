@@ -1,0 +1,12 @@
+{
+  "OnceCell": {
+    "prefix": "oc",
+    "body": ["pub static ${1:NAME}: OnceCell<${2:TYPE}> = OnceCell::new();"],
+    "description": "create an oncecell instance"
+  },
+  "Tokio": {
+    "prefix": "tk",
+    "body": ["#[tokio::main]"],
+    "description": "tokio macro"
+  }
+}

@@ -37,6 +37,10 @@
         "path": "./rust/rust.json"
       },
       {
+        "language": "rust",
+        "path": "./rust/other.json"
+      },
+      {
         "language": "typescript",
         "path": "./typescript/typescript.json"
       },
