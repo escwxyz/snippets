@@ -25,6 +25,10 @@
   "contributes": {
     "snippets": [
       {
+        "language": "all",
+        "path": "./all/surreal.json"
+      },
+      {
         "language": "dart",
         "path": "./dart/riverpod.json"
       },

@@ -1,0 +1,115 @@
+{
+  "let": {
+    "prefix": "let",
+    "body": ["LET ${1:parameter} = ${2:value};"],
+    "description": "LET statement"
+  },
+  "transaction": {
+    "prefix": "tx",
+    "body": [
+      "BEGIN TRANSACTION;",
+      "-- start",
+      "$0",
+      "-- end",
+      "COMMIT TRANSACTION;"
+    ],
+    "description": "TRANSACTION statement"
+  },
+  "if-else": {
+    "prefix": "if",
+    "body": [
+      "IF {$1:condition} THEN",
+      "\t${2:expression_one}",
+      "ELSE",
+      "\t${3:expression_two}",
+      "END"
+    ],
+    "description": "IF ELSE statement"
+  },
+  "elseif": {
+    "prefix": "else",
+    "body": ["ELSE IF ${1:condition} THEN", "\t${2:expression}"],
+    "description": "ELSE IF statement"
+  },
+  "select": {
+    "prefix": "select",
+    "body": ["SELECT ${1:projections} FROM {$2:targets};"],
+    "description": "SELECT statement"
+  },
+  "select-with-where": {
+    "prefix": "selectw",
+    "body": ["SELECT ${1:projections} FROM {$2:targets} WHERE ${3:condition};"],
+    "description": "SELECT with WHERE statement"
+  },
+  "select-with-order-asc": {
+    "prefix": "selectoa",
+    "body": [
+      "SELECT ${1:projections} FROM {$2:targets} ORDER BY ${3:field} ASC;"
+    ],
+    "description": "SELECT with ORDER ASC statement"
+  },
+  "select-with-order-desc": {
+    "prefix": "selectod",
+    "body": [
+      "SELECT ${1:projections} FROM {$2:targets} ORDER BY ${3:field} DESC;"
+    ],
+    "description": "SELECT with ORDER DESC statement"
+  },
+  "select-with-group": {
+    "prefix": "selectg",
+    "body": ["SELECT ${1:projections} FROM {$2:targets} GROUP BY ${3:field};"],
+    "description": "SELECT with GROUP statement"
+  },
+  "select-with-split": {
+    "prefix": "selects",
+    "body": ["SELECT ${1:projections} FROM {$2:targets} SPLIT ${3:field};"],
+    "description": "SELECT with SPLIT statement"
+  },
+  "select-with-limit": {
+    "prefix": "selectl",
+    "body": ["SELECT ${1:projections} FROM {$2:targets} LIMIT ${3:limit};"],
+    "description": "SELECT with LIMIT statement"
+  },
+  "select-with-fetch": {
+    "prefix": "selectf",
+    "body": ["SELECT ${1:projections} FROM {$2:targets} FETCH ${3:field};"],
+    "description": "SELECT with FETCH statement"
+  },
+  "insert": {
+    "prefix": "insert",
+    "body": ["INSERT INTO ${1:what} {", "\t${2:field}: ${3:value}", "};"],
+    "description": "INSERT statement"
+  },
+  "insert-value": {
+    "prefix": "insertv",
+    "body": ["INSERT INTO ${1:what} (${2:field}) VALUES (${3:value});"],
+    "description": "INSERT with VALUES statement"
+  },
+  "insert-duplicate": {
+    "prefix": "insertd",
+    "body": [
+      "INSERT INTO ${1:what} {",
+      "\t${2:field}: ${3:value}",
+      "} ON DUPLICATE KEY UPDATE ${4:$duplicate_field} = ${5:update_value};"
+    ],
+    "description": "INSERT with ON DUPLICATE KEY statement"
+  },
+  "insert-value-duplicate": {
+    "prefix": "insertvd",
+    "body": [
+      "INSERT INTO ${1:what} (${2:field}) VALUES (${3:value}) ON DUPLICATE KEY UPDATE ${4:$duplicate_field} = ${5:update_value};"
+    ],
+    "description": "INSERT with VALUES and ON DUPLICATE KEY statement"
+  },
+  "create": {
+    "prefix": "create",
+    "body": ["CREATE ${1:targets} CONTENT {", "\t${2:field}: ${3:value}", "};"],
+    "description": "CREATE CONTENT statement"
+  },
+  "create-set": {
+    "prefix": "creates",
+    "body": ["CREATE ${1:targets} SET ${2:field} = ${3:value};"],
+
+    "description": "CREATE SET statement"
+  }
+}
