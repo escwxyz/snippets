@@ -3,7 +3,9 @@
     "scope": "dart",
     "prefix": "riverpodPart",
     "description": "Create a part statement for Riverpod",
-    "body": ["part '${TM_FILENAME_BASE}.g.dart';"]
+    "body": [
+      "part '${TM_FILENAME_BASE}.g.dart';"
+    ]
   },
   "Riverpod: simple instance": {
     "scope": "dart",
@@ -71,7 +73,6 @@
       "}"
     ]
   },
-
   "Riverpod: class": {
     "scope": "dart",
     "prefix": "riverpodClass",
@@ -86,7 +87,6 @@
       "}"
     ]
   },
-
   "Riverpod: keep alive class": {
     "scope": "dart",
     "prefix": "riverpodClassKeepAlive",
@@ -101,7 +101,6 @@
       "}"
     ]
   },
-
   "Riverpod: async class": {
     "scope": "dart",
     "prefix": "riverpodAsyncClass",
@@ -116,7 +115,6 @@
       "}"
     ]
   },
-
   "Riverpod: keep alive async class": {
     "scope": "dart",
     "prefix": "riverpodAsyncClassKeepAlive",

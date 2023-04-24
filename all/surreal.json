@@ -1,7 +1,9 @@
 {
   "let": {
     "prefix": "let",
-    "body": ["LET ${1:parameter} = ${2:value};"],
+    "body": [
+      "LET ${1:parameter} = ${2:value};"
+    ],
     "description": "LET statement"
   },
   "transaction": {
@@ -28,17 +30,24 @@
   },
   "elseif": {
     "prefix": "else",
-    "body": ["ELSE IF ${1:condition} THEN", "\t${2:expression}"],
+    "body": [
+      "ELSE IF ${1:condition} THEN",
+      "\t${2:expression}"
+    ],
     "description": "ELSE IF statement"
   },
   "select": {
     "prefix": "select",
-    "body": ["SELECT ${1:projections} FROM {$2:targets};"],
+    "body": [
+      "SELECT ${1:projections} FROM {$2:targets};"
+    ],
     "description": "SELECT statement"
   },
   "select-with-where": {
     "prefix": "selectw",
-    "body": ["SELECT ${1:projections} FROM {$2:targets} WHERE ${3:condition};"],
+    "body": [
+      "SELECT ${1:projections} FROM {$2:targets} WHERE ${3:condition};"
+    ],
     "description": "SELECT with WHERE statement"
   },
   "select-with-order-asc": {
@@ -57,32 +66,46 @@
   },
   "select-with-group": {
     "prefix": "selectg",
-    "body": ["SELECT ${1:projections} FROM {$2:targets} GROUP BY ${3:field};"],
+    "body": [
+      "SELECT ${1:projections} FROM {$2:targets} GROUP BY ${3:field};"
+    ],
     "description": "SELECT with GROUP statement"
   },
   "select-with-split": {
     "prefix": "selects",
-    "body": ["SELECT ${1:projections} FROM {$2:targets} SPLIT ${3:field};"],
+    "body": [
+      "SELECT ${1:projections} FROM {$2:targets} SPLIT ${3:field};"
+    ],
     "description": "SELECT with SPLIT statement"
   },
   "select-with-limit": {
     "prefix": "selectl",
-    "body": ["SELECT ${1:projections} FROM {$2:targets} LIMIT ${3:limit};"],
+    "body": [
+      "SELECT ${1:projections} FROM {$2:targets} LIMIT ${3:limit};"
+    ],
     "description": "SELECT with LIMIT statement"
   },
   "select-with-fetch": {
     "prefix": "selectf",
-    "body": ["SELECT ${1:projections} FROM {$2:targets} FETCH ${3:field};"],
+    "body": [
+      "SELECT ${1:projections} FROM {$2:targets} FETCH ${3:field};"
+    ],
     "description": "SELECT with FETCH statement"
   },
   "insert": {
     "prefix": "insert",
-    "body": ["INSERT INTO ${1:what} {", "\t${2:field}: ${3:value}", "};"],
+    "body": [
+      "INSERT INTO ${1:what} {",
+      "\t${2:field}: ${3:value}",
+      "};"
+    ],
     "description": "INSERT statement"
   },
   "insert-value": {
     "prefix": "insertv",
-    "body": ["INSERT INTO ${1:what} (${2:field}) VALUES (${3:value});"],
+    "body": [
+      "INSERT INTO ${1:what} (${2:field}) VALUES (${3:value});"
+    ],
     "description": "INSERT with VALUES statement"
   },
   "insert-duplicate": {
@@ -103,13 +126,48 @@
   },
   "create": {
     "prefix": "create",
-    "body": ["CREATE ${1:targets} CONTENT {", "\t${2:field}: ${3:value}", "};"],
+    "body": [
+      "CREATE ${1:targets} CONTENT {",
+      "\t${2:field}: ${3:value}",
+      "};"
+    ],
     "description": "CREATE CONTENT statement"
   },
   "create-set": {
     "prefix": "creates",
-    "body": ["CREATE ${1:targets} SET ${2:field} = ${3:value};"],
-
+    "body": [
+      "CREATE ${1:targets} SET ${2:field} = ${3:value};"
+    ],
     "description": "CREATE SET statement"
+  },
+  "create-return": {
+    "prefix": "creater",
+    "body": [
+      "CREATE ${1:targets} CONTENT {",
+      "\t${2:field}: ${3:value}",
+      "} RETURN ${4:return};"
+    ],
+    "description": "CREATE CONTENT statement with RETURN"
+  },
+  "create-set-return": {
+    "prefix": "createsr",
+    "body": [
+      "CREATE ${1:targets} SET ${2:field} = ${3:value} RETURN ${4:return};"
+    ],
+    "description": "CREATE SET statement with RETURN"
+  },
+  "define-namespace": {
+    "prefix": "dn",
+    "body": [
+      "DEFINE NAMESPACE ${1:name};"
+    ],
+    "description": "DEFINE NAMESPACE statement"
+  },
+  "define-database": {
+    "prefix": "dd",
+    "body": [
+      "DEFINE DATABASE ${1:name};"
+    ],
+    "description": "DEFINE DATABASE statement"
   }
 }
