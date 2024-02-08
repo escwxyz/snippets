@@ -26,6 +26,10 @@
     "snippets": [
       {
         "language": "all",
+        "path": "./all/license.json"
+      },
+      {
+        "language": "all",
         "path": "./all/surreal.json"
       },
       {
